@@ -2,8 +2,7 @@ import nltk
 from nltk.tokenize import word_tokenize, TweetTokenizer
 import spacy
 
-# Download NLTK data if not already done
-nltk.download('punkt')
+nltk.download('punkt_tab')
 
 texts = [
     "ATG-CGA-TTT-AGC",
@@ -11,8 +10,11 @@ texts = [
     "Just landed in NYC!!! 😎✈ #travel #blessed"
 ]
 
+tokens = word_tokenize(texts[0])
+print(tokens)
 # Method 1: NLTK word_tokenize
 for text in texts:
+    print(text)
     print("NLTK:", word_tokenize(text))
 
 # Method 2: TweetTokenizer
